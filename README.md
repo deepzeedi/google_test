@@ -5,11 +5,11 @@ The programm was test on Ubuntu v. 18.04, Chrome webbrowser v.74.
 For launch programm you need to instal Selenium. 
 To instal selenium run in terminal:
 
-pip install selenium
+    pip install selenium
 
 To make possible launching GChrome you need download webdriver (in the repository) and paste the path in 5 line:
 
-browser = webdriver.Chrome(executable_path='youre/webdriver/path')
+    browser = webdriver.Chrome(executable_path='youre/webdriver/path')
 
 Possible problems:
 - uncoding. Need to use UTF-8 encoding to launch programm.
