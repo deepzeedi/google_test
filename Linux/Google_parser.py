@@ -28,16 +28,18 @@ def send_form():
 # Отправляем запрос в Google
 send_form()
 
-# Выбираем поисковые результаты
-titles = browser.find_elements_by_xpath('//div/a/h3')
-links = browser.find_elements_by_xpath('//cite')
-quotes = browser.find_elements_by_xpath('//div/span[@class="st"]')
-
-# Печатаем в консоль результаты поиска
-for title, link, quote, in zip(titles, links, quotes):
-    print(f'\n{title.text.upper()}\n{link.text}\n{quote.text}\n')
+# Вывести в консоль результаты?
+if 'y' == input('Вывести результаты в консоль? [y/n]: '):
+    # Выбираем поисковые результаты
+    titles = browser.find_elements_by_xpath('//div/a/h3')
+    links = browser.find_elements_by_xpath('//cite')
+    quotes = browser.find_elements_by_xpath('//div/span[@class="st"]')
+    # Печатаем в консоль результаты поиска
+    for title, link, quote, in zip(titles, links, quotes):
+        print(f'\n{title.text.upper()}\n{link.text}\n{quote.text}\n')
+else:
+    pass
     
 # Выходим из программы
 input('\nPress enter to exit...')
 browser.quit()
-
