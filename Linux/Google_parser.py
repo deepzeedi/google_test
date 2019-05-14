@@ -1,7 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 
-
+# Выбираем вебдрайвер
 browser = webdriver.Chrome(executable_path='/home/deepzeedi/Python/chromedriver')
 
 # Открываем Chrome и переходим на стартовую страницу Google
